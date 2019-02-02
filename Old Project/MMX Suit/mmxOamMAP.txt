@@ -1,0 +1,14 @@
+00-1C HP bar
+20-2C Smoke
+30-38 Player Bullet
+3C-3C Player Charged Bullet
+40-6C Dead Balls
+70-8C 1 Tile Clusters
+90-A4 extended
+A8-FC Free
+
+BeeBlader Instance:
+70-90 bullet
+94 Misil
+98-A0 Misil Smoke
+A4-FC Floor
