@@ -1,0 +1,343 @@
+<!DOCTYPE html []>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="MarkdownViewer++" />
+    <title>known-issues.md</title>
+    <style type="text/css">
+            
+/* Avoid page breaks inside the most common attributes, especially for exports (i.e. PDF) */
+td, h1, h2, h3, h4, h5, p, ul, ol, li {
+    page-break-inside: avoid; 
+}
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body &gt; *:first-child {
+  margin-top: 0 !important; }
+body &gt; *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url("../../images/modules/styleguide/para.png") no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url("../../images/modules/pulls/dirty-shade.png") repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0; }
+
+body &gt; h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body &gt; h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body &gt; h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body &gt; h3:first-child, body &gt; h4:first-child, body &gt; h5:first-child, body &gt; h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+ul :last-child, ol :last-child {
+  margin-bottom: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt &gt; :first-child {
+      margin-top: 0; }
+    dl dt &gt; :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd &gt; :first-child {
+      margin-top: 0; }
+    dl dd &gt; :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote &gt; :first-child {
+    margin-top: 0; }
+  blockquote &gt; :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      text-align: left;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      text-align: left;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame &gt; span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center &gt; span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right &gt; span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right &gt; span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; } \n
+        </style>
+  </head>
+  <body>
+    <h1 id="known-issues">Known Issues</h1>
+    <p>Developed since 2012, one of the biggest SA-1 Pack challenges is to deal with potential emulation issues, because of the chip complexity and the so little known, accurate information about the SA-1 system.</p>
+    <p>Along that, there is always some issues that is from the SA-1 Pack itself and needs to be corrected. This document will attempt to list some potential issues the patch will present on emulators as well on real consoles.</p>
+    <p>For consistency, only issues from latest version of each emulator will be listed, with rare exceptions.</p>
+    <p>(!): Issues caused by an incorrect behavior of the SA-1 Pack, not from emulator/console.</p>
+    <h2 id="sd2snes">sd2snes</h2>
+    <ul>
+      <li>(!) The console has some slight PPU scanline glitch below status bar during mode 7 bosses.</li>
+      <li>The SA-1 CPU has some speed inconsistencies. The CPU runs slight slower (~9.63 MHz) during ROM access and runs faster than normal on I-RAM access (~13.76 MHz).</li>
+    </ul>
+    <h2 id="real-sa-1-cart">Real SA-1 cart</h2>
+    <ul>
+      <li>(!) The console has some slight PPU scanline glitch below status bar during mode 7 bosses.</li>
+    </ul>
+    <h2 id="bsnes">bsnes</h2>
+    <p>bsnes refers to the SNES emulation part of higan.</p>
+    <ul>
+      <li>On the older versions of bsnes (0.7x, probably 0.8x as well), variable length bit processing does not get affected by the Super MMC registers, making impossible to access the last 4 MB of the ROM though the SA-1 ROM bit stream feature. Although fixed on the newer versions, people unfortunately still uses older versions of the emulator and can be affected by this bug.</li>
+      <li>256 kB BW-RAM is not supported unless if the user writes an explicit custom mapper (BML/XML mapper).</li>
+    </ul>
+    <h2 id="snes9x">Snes9x</h2>
+    <ul>
+      <li>Since version 1.56, the SA-1 CPU is 12% faster than the nominal 10.74 MHz clock. It's clocked at ~12.01 MHz instead.</li>
+      <li>SA-1 CPU is affected by the W-RAM refreshes.</li>
+      <li>SA-1 CPU is wrongly paused during SNES DMA.</li>
+      <li>SA-1 CPU is wrongly paused during H-DMA.</li>
+      <li>Virtual Bitmap BW-RAM area (<code>$60-$6F</code>) can only access the first 64 kB of the BW-RAM.</li>
+      <li>Virtual BW-RAM mapping (<code>$6000-$7FFF</code>) can only map the first 64 kB of the BW-RAM.</li>
+      <li>For SA-1 ROMs larger than 4 MB, Snes9x may wrongly swap the upper 4 MB with the lower 4 MB.</li>
+      <li>Does not lock W-RAM accesses.</li>
+      <li>Does not support 256 kB BW-RAM.</li>
+      <li>Probably... more coming.</li>
+    </ul>
+    <h2 id="zsnes">ZSNES</h2>
+    <ul>
+      <li>The SA-1 CPU is 42% slower than the nominal 10.74 MHz clock. It's clocked at ~6.18 MHz instead.</li>
+      <li>Random crashes and freezes are often common, with an unknown reason for that.</li>
+      <li>It's not possible to execute code on I-RAM nor BW-RAM. Applies to both SA-1 CPU and SNES CPU. To workaround, code must be placed and executed on the W-RAM.</li>
+      <li>There is no Character Conversion support, with the exception from the one that Super Mario RPG uses.</li>
+      <li>Has partial SA-1 IRQ support. Often SA-1 IRQs conflicts with PPU and H-/V-IRQs.</li>
+      <li>Can drop frames out of sudden depending of the code executed on the SNES CPU.</li>
+      <li>Does not lock access to any of the SNES registers. SA-1 can even DMA to the VRAM.</li>
+      <li>Does not generate IRQ after SA-1 DMA execution.</li>
+      <li>Does not support 256 kB BW-RAM.</li>
+      <li>Does not support 8 MB ROMs.</li>
+      <li>The first 128 kB on the last 2 megabytes on 6 MB ROMs is unusable because ZSNES uses it as an actual memory and for other tables.</li>
+      <li>The H-Blank flag from bit 6 of $4212 does not work correctly.</li>
+      <li>And more coming.</li>
+    </ul>
+  </body>
+</html>

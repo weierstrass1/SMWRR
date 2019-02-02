@@ -1,0 +1,534 @@
+<!DOCTYPE html []>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="MarkdownViewer++" />
+    <title>BW-RAM.md</title>
+    <style type="text/css">
+            
+/* Avoid page breaks inside the most common attributes, especially for exports (i.e. PDF) */
+td, h1, h2, h3, h4, h5, p, ul, ol, li {
+    page-break-inside: avoid; 
+}
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body &gt; *:first-child {
+  margin-top: 0 !important; }
+body &gt; *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url("../../images/modules/styleguide/para.png") no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url("../../images/modules/pulls/dirty-shade.png") repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0; }
+
+body &gt; h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body &gt; h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body &gt; h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body &gt; h3:first-child, body &gt; h4:first-child, body &gt; h5:first-child, body &gt; h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+ul :last-child, ol :last-child {
+  margin-bottom: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt &gt; :first-child {
+      margin-top: 0; }
+    dl dt &gt; :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd &gt; :first-child {
+      margin-top: 0; }
+    dl dd &gt; :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote &gt; :first-child {
+    margin-top: 0; }
+  blockquote &gt; :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      text-align: left;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      text-align: left;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame &gt; span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center &gt; span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right &gt; span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right &gt; span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; } \n
+        </style>
+  </head>
+  <body>
+    <h1 id="bw-ram">BW-RAM</h1>
+    <p>BW-RAM is the SA-1 backup and work memory. Plays a similar role to the S-RAM, but it is also part of the work memory considering the SA-1 CPU does not have W-RAM access.</p>
+    <p>Clocked at 5.37 MHz, the BW-RAM has a configurable size, varying from 2 kB to 256 kB. Currently SA-1 Pack sets the BW-RAM size to 128 kB.</p>
+    <p>The BW-RAM is mapped on banks<code>$40-$4F</code>, with its contents mirrored though banks<code>$42-$4F</code>(assuming 128 kB BW-RAM).</p>
+    <h3 id="virtual-memory">Virtual Memory</h3>
+    <p>The SAS (Super Accelerator System) Memory Map also mirrors a page of the BW-RAM on<code>$6000-$7FFF</code>though banks<code>$00-$3F</code>and<code>$80-$BF</code>. By default, SA-1 Pack maps<code>$6000-$7FFF</code> to<code>$40:0000-$40:1FFF</code>, <strong>but the SAS allows to it be mapped to any page.</strong> Using register <code>$2224</code> for the S-CPU and <code>$2225</code> for the C-CPU, you can define to which page<code>$6000-$7FFF</code>maps to. Currently SA-1 Pack preserves<code>$2225</code> by pushing <code>$318F</code> during interrupts and storing back to <code>$2225</code> during SA-1 IRQs.</p>
+    <h3 id="virtual-vram">Virtual VRAM</h3>
+    <p>Banks <code>$60-$6F</code> on the SA-1 CPU Memory Map are also known as <strong>Virtual Bitmap VRAM</strong> or <strong>Bitmap Data Storage Area</strong>. It's an area made for drawing 4BPP or 2BPP bitmap images. The SAS splits and projects the BW-RAM into blocks of four or two bits to the region. See the Memory Map document for more information about it.</p>
+    <p>The region can also be mirrored to<code>$6000-$7FFF</code>though bit 7 of the register<code>$2225</code>.</p>
+    <h3 id="access-time">Access Time</h3>
+    <p>The BW-RAM has unrestricted access from both C-CPU and S-CPU. However, because it's clocked at 5.37 MHz, there's an additional memory cycle on the SA-1 CPU.</p>
+    <p>For example,<code>STA $400000</code>(8-bit A) will take six 10.74 MHz cycles and not five. The "effective speed" on this case will be ~8.95 MHz.
+<code>STA $00</code>(DP =<code>$6000</code>, 16-bit A) will take six 10.74 MHz cycles compared to four. "Effective speed" will be ~7.16 MHz.</p>
+    <h2 id="bw-ram-memory-map">BW-RAM Memory Map</h2>
+    <p>
+      <strong>Page</strong> in this document refers to a block of <code>0x2000</code> or 8192 bytes.</p>
+    <p>
+      <strong>Not cleared</strong> means that the region is not cleared and is therefore saved to the cart S-RAM.</p>
+    <h5 id="page-0">Page 0</h5>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: center;">Start</th>
+          <th style="text-align: center;">End</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: center;">
+            <code>$40:0000</code>
+          </td>
+          <td style="text-align: center;">
+            <code>$40:00FF</code>
+          </td>
+          <td>Empty. Not cleared. Strongly not recommended to use, because it's the memory region used by Sprite Tool to put additional sprite tables.</td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">
+            <code>$40:0100</code>
+          </td>
+          <td style="text-align: center;">
+            <code>$40:010A</code>
+          </td>
+          <td>SMW's<code>$7E:0100-$7E:010A</code>.</td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">
+            <code>$40:010B</code>
+          </td>
+          <td style="text-align: center;">
+            <code>$40:01FF</code>
+          </td>
+          <td>Empty. Cleared at reset and title screen load. Originally reserved for S-CPU's stack, which stayed at W-RAM and was moved to<code>$7E:1F00-$7E:1FFF</code>. <strong>Reserved by SA-1 Pack for future expansion.</strong></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">
+            <code>$40:0200</code>
+          </td>
+          <td style="text-align: center;">
+            <code>$40:1FFF</code>
+          </td>
+          <td>SMW's<code>$7E:0200-$7E:1FFF</code>.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h5 id="page-1">Page 1</h5>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: center;">Start</th>
+          <th style="text-align: center;">End</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: center;">
+            <code>$40:2000</code>
+          </td>
+          <td style="text-align: center;">
+            <code>$40:3FFF</code>
+          </td>
+          <td>Empty. Not cleared. Strongly recommended to use the region as Character Conversion 1 bitmap buffer, which is mapped to<code>$60:4000-$60:7FFF</code> (VRAM 4BPP mode) or <code>$60:8000-$60:FFFF</code> (VRAM 2BPP mode).</td>
+        </tr>
+      </tbody>
+    </table>
+    <h5 id="pages-2-7">Pages 2-7</h5>
+    <p>(<code>$4000-$5FFF</code>,<code>$6000-$7FFF</code>,<code>$8000-$9FFF</code>,<code>$A000-$BFFF</code>,<code>$C000-$DFFF</code>,<code>$E000-$FFFF</code>)</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: center;">Start</th>
+          <th style="text-align: center;">End</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: center;">
+            <code>$40:4000</code>
+          </td>
+          <td style="text-align: center;">
+            <code>$40:C7FF</code>
+          </td>
+          <td>Empty. Not cleared.</td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">
+            <code>$40:C800</code>
+          </td>
+          <td style="text-align: center;">
+            <code>$40:FFFF</code>
+          </td>
+          <td>SMW's<code>$7E:C800-$7E:FFFF</code>.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h5 id="pages-8-11">Pages 8-11</h5>
+    <p>(<code>$0000-$1FFF</code>,<code>$2000-$3FFF</code>,<code>$4000-$5FFF</code>,<code>$6000-$7FFF</code>)</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: center;">Start</th>
+          <th style="text-align: center;">End</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: center;">
+            <code>$41:0000</code>
+          </td>
+          <td style="text-align: center;">
+            <code>$41:7FFF</code>
+          </td>
+          <td>Used as a general-purpose buffer by SA-1 Pack, including GFX decompression. Also used on RPG Hacker's VWF dialogues. 32 kB total.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h5 id="page-12">Page 12</h5>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: center;">Start</th>
+          <th style="text-align: center;">End</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: center;">
+            <code>$41:8000</code>
+          </td>
+          <td style="text-align: center;">
+            <code>$41:87FF</code>
+          </td>
+          <td>smkdan's dynamic sprites (dsx) buffer. If dynamic sprites are not used, empty. Not cleared.</td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">
+            <code>$41:8800</code>
+          </td>
+          <td style="text-align: center;">
+            <code>$41:89FF</code>
+          </td>
+          <td>SMW's<code>$7F:9A7B</code>. Wiggler's segment buffer.</td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">
+            <code>$41:8A00</code>
+          </td>
+          <td style="text-align: center;">
+            <code>$41:8AFE</code>
+          </td>
+          <td>SMW's<code>$7E:1938</code>. Sprite load status within the level, extended to 255 entries.</td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">
+            <code>$41:8AFF</code>
+          </td>
+          <td style="text-align: center;">
+            <code>$41:9FFF</code>
+          </td>
+          <td>Empty. Not cleared. It's 5377 bytes (~5.25 KB) free in total.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h5 id="page-13">Page 13</h5>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: center;">Start</th>
+          <th style="text-align: center;">End</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: center;">
+            <code>$41:A000</code>
+          </td>
+          <td style="text-align: center;">
+            <code>$41:BFFF</code>
+          </td>
+          <td>Reserved for SRAM Expansion Area. May be used by S-RAM/BW-RAM Plus. Otherwise empty, not cleared.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h5 id="pages-14-15">Pages 14-15</h5>
+    <p>(<code>$C000-$DFFF</code>,<code>$E000-$FFFF</code>)</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: center;">Start</th>
+          <th style="text-align: center;">End</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: center;">
+            <code>$41:C000</code>
+          </td>
+          <td style="text-align: center;">
+            <code>$41:C7FF</code>
+          </td>
+          <td>SMW's SRAM Area. Originally<code>$70:0000-$70:07FF</code>, which is now unmapped and replaced by the BW-RAM.</td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">
+            <code>$41:C800</code>
+          </td>
+          <td style="text-align: center;">
+            <code>$41:FFFF</code>
+          </td>
+          <td>SMW's<code>$7F:C800-$7F:FFFF</code>.</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

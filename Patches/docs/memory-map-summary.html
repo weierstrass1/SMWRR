@@ -1,0 +1,615 @@
+<!DOCTYPE html []>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="MarkdownViewer++" />
+    <title>memory-map-summary.md</title>
+    <style type="text/css">
+            
+/* Avoid page breaks inside the most common attributes, especially for exports (i.e. PDF) */
+td, h1, h2, h3, h4, h5, p, ul, ol, li {
+    page-break-inside: avoid; 
+}
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body &gt; *:first-child {
+  margin-top: 0 !important; }
+body &gt; *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url("../../images/modules/styleguide/para.png") no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url("../../images/modules/pulls/dirty-shade.png") repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0; }
+
+body &gt; h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body &gt; h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body &gt; h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body &gt; h3:first-child, body &gt; h4:first-child, body &gt; h5:first-child, body &gt; h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+ul :last-child, ol :last-child {
+  margin-bottom: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt &gt; :first-child {
+      margin-top: 0; }
+    dl dt &gt; :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd &gt; :first-child {
+      margin-top: 0; }
+    dl dd &gt; :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote &gt; :first-child {
+    margin-top: 0; }
+  blockquote &gt; :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      text-align: left;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      text-align: left;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame &gt; span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center &gt; span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right &gt; span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right &gt; span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; } \n
+        </style>
+  </head>
+  <body>
+    <h1 id="memory-map-summary">Memory Map Summary</h1>
+    <p>This is a quick summary of the memory changes made by the SAS Memory Map and by SA-1 Pack.</p>
+    <h2 id="hybrid-remapping">Hybrid Remapping</h2>
+    <p>It's possible to write code that works with both SA-1 Pack SMW ROMs and regular SMW ROMs by detecting the ROM mapper and using a couple of defines depending of the ROM type detected. Take a look at <a href="remap.asm">remap.asm</a>.</p>
+    <p>More important than making hybrid ASM code, it's understanding how the SA-1 memory map works and how you can make your code potentially much faster and with a higher compatibility on SA-1 SMW ROMs. This document contains a well-summarized information about the SA-1 memory map.</p>
+    <h2 id="rom-memory-map">ROM Memory Map</h2>
+    <p>SA-1 features the Super MMC, a memory controller that can support ROMs larger than 4 MB. It offers bank switching support though registers<code>$2220-$2223</code>, which allows switching ROM data in blocks of 1 MB.</p>
+    <h3 id="lorom-banks">LoROM banks</h3>
+    <p>Applies for any ROM size.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Bank Range</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <code>$00-$1F</code>
+          </td>
+          <td>1st Mbyte of the ROM. Super MMC register<code>$2220</code>CXB.</td>
+        </tr>
+        <tr>
+          <td>
+            <code>$20-$3F</code>
+          </td>
+          <td>2nd Mbyte of the ROM. Super MMC register<code>$2221</code>DXB.</td>
+        </tr>
+        <tr>
+          <td>
+            <code>$80-$9F</code>
+          </td>
+          <td>3rd Mbyte of the ROM. Super MMC register<code>$2222</code>EXB.</td>
+        </tr>
+        <tr>
+          <td>
+            <code>$A0-$BF</code>
+          </td>
+          <td>4th Mbyte of the ROM. Super MMC register<code>$2223</code>FXB.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 id="hirom-banks">HiROM banks</h3>
+    <p>Applies for ROMs up to 4 MB.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Bank Range</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <code>$C0-$CF</code>
+          </td>
+          <td>1st Mbyte of the ROM. Super MMC register<code>$2220</code>CXB.</td>
+        </tr>
+        <tr>
+          <td>
+            <code>$D0-$DF</code>
+          </td>
+          <td>2nd Mbyte of the ROM. Super MMC register<code>$2221</code>DXB.</td>
+        </tr>
+        <tr>
+          <td>
+            <code>$E0-$EF</code>
+          </td>
+          <td>3rd Mbyte of the ROM. Super MMC register<code>$2222</code>EXB.</td>
+        </tr>
+        <tr>
+          <td>
+            <code>$F0-$FF</code>
+          </td>
+          <td>4th Mbyte of the ROM. Super MMC register<code>$2223</code>FXB.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 id="exhirom-banks">ExHiROM banks</h3>
+    <p>Applies for ROMs larger than 4 MB and up to 8 MB. LoROM mapping is not affected for the way SA-1 Pack configures the SAS Memory Map.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Bank Range</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <code>$C0-$CF</code>
+          </td>
+          <td>5th Mbyte of the ROM. Super MMC register<code>$2220</code>CXB.</td>
+        </tr>
+        <tr>
+          <td>
+            <code>$D0-$DF</code>
+          </td>
+          <td>6th Mbyte of the ROM. Super MMC register<code>$2221</code>DXB.</td>
+        </tr>
+        <tr>
+          <td>
+            <code>$E0-$EF</code>
+          </td>
+          <td>7th Mbyte of the ROM. Super MMC register<code>$2222</code>EXB.</td>
+        </tr>
+        <tr>
+          <td>
+            <code>$F0-$FF</code>
+          </td>
+          <td>8th Mbyte of the ROM. Super MMC register<code>$2223</code>FXB.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 id="dual-rom-system">Dual ROM System</h3>
+    <p>The Dual ROM system works by merging two or more ROMs in a single one and selecting which ROM image to project using the Super MMC registers. For example, two 4 MB ROMs can be merged and the first ROM can be loaded by loading values<code>$00-$03</code>to the registers<code>$2220-$2223</code> and the second ROM can be loaded by loading values<code>$04-$07</code>to the same registers.</p>
+    <p>In practice, the Dual ROM system allows to either merge two games together or double the amount of resources available (levels, map16, music, sprites, overworlds, etc.) with the compromise of having to control two or more gamepak ROMs at the same time.</p>
+    <p>SA-1 Pack currently does not include a Dual ROM system controller.</p>
+    <h2 id="ram-memory-map">RAM Memory Map</h2>
+    <p>The SA-1 CPU (C-CPU) can't access the W-RAM, therefore to transfer some routine to it it's required to remap most of the game memory either to I-RAM or BW-RAM. Other than that, both S-CPU and C-CPU memory maps are fairly similar.</p>
+    <h3 id="ram-banks">RAM banks</h3>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: center;">Banks</th>
+          <th style="text-align: center;">Access</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: center;">
+            <code>$00-$3F</code>
+          </td>
+          <td style="text-align: center;">C-CPU</td>
+          <td>I-RAM at addresses<code>$0000-$07FF</code> @ 10.74 MHz</td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">
+            <code>$00-$3F</code>
+          </td>
+          <td style="text-align: center;">S-CPU</td>
+          <td>W-RAM at addresses<code>$0000-$1FFF</code> @ 2.68 MHz</td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">
+            <code>$00-$3F</code>
+          </td>
+          <td style="text-align: center;">Both</td>
+          <td>I-RAM at addresses<code>$3000-$37FF</code> @ 10.74 MHz</td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">
+            <code>$00-$3F</code>
+          </td>
+          <td style="text-align: center;">Both</td>
+          <td>BW-RAM Virtual Memory at addresses<code>$6000-$7FFF</code> @ 5.37 MHz</td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">
+            <code>$40-$4F</code>
+          </td>
+          <td style="text-align: center;">Both</td>
+          <td>BW-RAM @ 5.37 MHz</td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">
+            <code>$60-$6F</code>
+          </td>
+          <td style="text-align: center;">C-CPU</td>
+          <td>BW-RAM Virtual Bitmap Memory @ 5.37 MHz</td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">
+            <code>$7E-$7F</code>
+          </td>
+          <td style="text-align: center;">S-CPU</td>
+          <td>W-RAM @ 2.68 MHz</td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">
+            <code>$80-$BF</code>
+          </td>
+          <td style="text-align: center;">C-CPU</td>
+          <td>I-RAM at addresses<code>$0000-$07FF</code> @ 10.74 MHz</td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">
+            <code>$80-$BF</code>
+          </td>
+          <td style="text-align: center;">S-CPU</td>
+          <td>W-RAM at addresses<code>$0000-$1FFF</code> @ 2.68 MHz</td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">
+            <code>$80-$BF</code>
+          </td>
+          <td style="text-align: center;">Both</td>
+          <td>I-RAM at addresses<code>$3000-$37FF</code> @ 10.74 MHz</td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">
+            <code>$80-$BF</code>
+          </td>
+          <td style="text-align: center;">Both</td>
+          <td>BW-RAM Virtual Memory at addresses<code>$6000-$7FFF</code> @ 5.37 MHz</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 id="bit-absolute-addresses">16-bit (Absolute) Addresses</h3>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: center;">From</th>
+          <th style="text-align: center;">To</th>
+          <th>Comment</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: center;">
+            <code>$0000-$00FF</code>
+          </td>
+          <td style="text-align: center;">
+            <code>$3000-$30FF</code>
+          </td>
+          <td>Note that you don't need to change direct page opcodes, like<code>LDA $19</code>. The remap only applies to 16-bit opcodes such as<code>JML [$0000]</code>or<code>STA $00B6,y</code>.</td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">
+            <code>$0100-$1FFF</code>
+          </td>
+          <td style="text-align: center;">
+            <code>$6100-$7FFF</code>
+          </td>
+          <td>You also can change data bank to <code>$40</code> and stay with the address, paying attention to the other RAM addresses outside the range.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 id="bit-absolute-long-addresses">24-bit (Absolute Long) Addresses</h3>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: center;">From</th>
+          <th style="text-align: center;">To</th>
+          <th>Comment</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: center;">
+            <code>$7E:1938-$7E:19B7</code>
+          </td>
+          <td style="text-align: center;">
+            <code>$41:8A00-$41:8AFE</code>
+          </td>
+          <td>Used to be 16-bit (absolute) addressed, now 24-bit (absolute long) to accommodate more sprite entries per level (from 128 to 255).</td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">
+            <code>$7E:C800-$7E:FFFF</code>
+          </td>
+          <td style="text-align: center;">
+            <code>$40:C800-$40:FFFF</code>
+          </td>
+          <td>Map16 low byte plus Overworld related data.</td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">
+            <code>$7F:9A7B-$7F:9C7A</code>
+          </td>
+          <td style="text-align: center;">
+            <code>$41:8800-$41:89FF</code>
+          </td>
+          <td>Wiggler's segment buffer.</td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">
+            <code>$7F:C700-$7F:FFFF</code>
+          </td>
+          <td style="text-align: center;">
+            <code>$41:C800-$41:FFFF</code>
+          </td>
+          <td>Map16 high byte.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 id="s-ram">S-RAM</h3>
+    <p>The S-RAM (static memory) banks used to be banks<code>$70-$71</code>, but the SAS Memory Map replaces it with BW-RAM, which is also used as work RAM and has is allocated though banks<code>$40-$43</code>. The remapped addresses are stated below.</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: center;">From</th>
+          <th style="text-align: center;">To</th>
+          <th>Comment</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: center;">
+            <code>$70:0000-$70:07FF</code>
+          </td>
+          <td style="text-align: center;">
+            <code>$41:C000-$41:C7FF</code>
+          </td>
+          <td>Original save memory (2 kB big). Not everything is used.</td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">
+            <code>$70:0800-$70:27FF</code>
+          </td>
+          <td style="text-align: center;">
+            <code>$41:A000-$41:BFFF</code>
+          </td>
+          <td>Expansion area planned for SMW hacks.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 id="sprite-tables">Sprite Tables</h3>
+    <p>Although the sprite tables are all 16-bit (absolute) addresses and therefore were remapped together to the BW-RAM, Arujus's More Sprites patch had to move them again to accommodate the expanded 22 sprites slots limits. Read more at <a href="Sprite-Remap.html">Sprite Remap</a> doc.</p>
+  </body>
+</html>

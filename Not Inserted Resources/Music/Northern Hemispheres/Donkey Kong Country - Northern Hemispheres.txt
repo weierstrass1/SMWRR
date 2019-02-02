@@ -1,0 +1,196 @@
+#samples
+{
+	#optimized
+	"DKC/Choir.brr"
+	"DKC/Tracks.brr"
+	"DKC/Harp.brr"
+	"DKC/Bass Drum.brr"
+	"DKC/Drum.brr"
+	"DKC/Drip.brr"
+	"DKC/Piano.brr"
+	"DKC/Flute.brr"
+	"DKC/Clank2.brr"
+	"DKC/1.brr"
+	"DKC/Strings.brr"
+	"DKC/Bannana.brr"
+	"DKC/2.brr"
+}
+#instruments
+{
+	"DKC/Choir.brr" $88 $E0 $FF $01 $C8
+	"DKC/Tracks.brr" $8F $BF $FF $03 $D6
+	"DKC/Harp.brr" $8F $FA $FF $07 $12
+	"DKC/Bass Drum.brr" $87 $F1 $FF $02 $AC
+	"DKC/Drum.brr" $84 $FF $FF $FF $A9
+	"DKC/Drum.brr" $84 $FF $FF $0D $A9
+	"DKC/Drip.brr" $8F $FC $FF $03 $D2
+	"DKC/Piano.brr" $8C $F5 $FF $04 $00
+	"DKC/Flute.brr" $82 $EB $FF $03 $90
+	"DKC/Clank2.brr" $8E $FC $FF $06 $10
+	"DKC/1.brr" $87 $A3 $FF $07 $00
+	"DKC/Strings.brr" $8F $F3 $FF $04 $3E;41
+	"DKC/Bannana.brr" $8E $F5 $FF $03 $96;42
+	"DKC/Choir.brr" $82 $A7 $FF $01 $C8;43
+	"DKC/2.brr" $8F $F2 $FF $03 $84;44
+}
+#amk 2
+$F5 $7F $0A $01 $01 $01 $01 $01 $01
+$F4 $02
+w180
+#0t38
+$EF $00 $32 $32
+$F1 $04 $4D $01
+r1^2^4.$F4 $03 q7F@31o3y11$FA $03 $4A v255q7Fc64c=2r=10c=5c=2r=7c64r8$FA $03 $0D y10c64c64c=2r=10c=4c=2r=5c64c64c64c=2r=8c=4c=2r64^2v253y9c64c64c64c=2r=7c=4c=2r=5c64c64r=7c=2r=4c=2c=1r64c+=2c+=4d=2r64$ED $0D $BF d+=1r=1e64r=1d+=2r32<a+=2r=2>c+=4r=7d=2$FA $03 $4A y11 $ED $0F $BF r=5q1Fc64q7Fy10v242$FA $03 $00 c+64c+64c+=2r=10c+=4c+=2r=4c+64c+64c+64c+=2r=4c+=4c+=2r=55y9d=2d=2r=2d+=2d+=4e=2r=2f=2r=1f+64r=1f=2r32c=2r=10v227d+64d+64d+64d+=2r=7d+=4d+=2r=4d+64d+64r=7d+=2r=4e=4r=8f=2r=79^1^1/^2
+$FA $03 $00 (1)[y11$DC $FF $09 v177@32$ED $0F $F1 o2c16.$ED $0D $F1 d+16.d16.d+16.$ED $0E $F1 c16.$ED $0C $F1 d+16.d16.d+16.$ED $0D $F1 c16.$ED $0B $F1 d+16.d16.d+16.v174$ED $0C $F1 c16.$ED $0A $F1 d+16.d16.d+16.]r1^2
+$ED $0F $F1 $DC $FF $0B o2c16.$ED $0D $F1 f16.g16.f16.$ED $0E $F1 c16.$ED $0C $F1 f16.g16.f16.$ED $0D $F1 c16.$ED $0B $F1 f16.g16.f16.$ED $0C $F1 c16.$ED $0A $F1 f16.g16.f16.r1^2
+(1)y9$DC $FF $0B v177@32$ED $0F $F1 o2c16.$ED $0D $F1 d+16.d16.d+16.$ED $0E $F1 c16.$ED $0C $F1 d+16.d16.d+16.$ED $0D $F1 c16.$ED $0B $F1 d+16.d16.d+16.v174$ED $0C $F1 c16.$ED $0A $F1 d+16.d16.d+16.
+[[r2]]21
+y10v180 $F4 $03
+@32o2g32.$ED $09 $FC g32.>$ED $0D $FA d+32.$ED $09 $FC d+32.
+$ED $0D $FA d32.$ED $09 $FC d32.$ED $0D $FA d+32.$ED $09 $FA d+32.
+v179$ED $0E $FA <g+32.$ED $09 $FC g+32.>$ED $0C $FA d+32.$ED $09 $FC d+32.
+$ED $0C $FA d32.$ED $09 $FC d32.$ED $0C $FA d+32.$ED $09 $FA d+32.
+v177$ED $0D $FA <g32.$ED $09 $FC g32.>$ED $0B $FA d+32.$ED $09 $FC d+32.
+$ED $0B $FA d32.$ED $09 $FC d32.$ED $0B $FA d+32.$ED $09 $FA d+32.
+v131$ED $0C $FA <g+32.$ED $09 $FC g+32.>$ED $0B $FA d+32.$ED $09 $FC d+32.
+$ED $0B $FA d32.$ED $09 $FC d32.$ED $0B $FA d+32.$ED $09 $FA d+32.
+t40
+v177(6)[$ED $0B $FA <g32.$ED $09 $FC g32.>$ED $0A $FA d+32.$ED $09 $FC d+32.
+$ED $0A $FA d32.$ED $09 $FC d32.$ED $0A $FA d+32.$ED $09 $FA d+32.]
+v180(13)[$ED $0B $FA <g+32.$ED $09 $FC g+32.>$ED $0A $FA d+32.$ED $09 $FC d+32.
+$ED $0A $FA d32.$ED $09 $FC d32.$ED $0A $FA d+32.$ED $09 $FA d+32.]
+v176(6)v132(13)
+r1^4.^32$F4 $03 $DE $00 $0E $18 @40y10v116o5a+2$DD $18 $18 $BC^16.^4c2^4<$ED $06 $A9 a+2$DD $12 $18 $B0^1r1^4^16
+$F4 $03 $DF
+$FA $03 $A9 (8)[v240@33o2g32.v244g32.v249g32.v253g32.](7)[@33v255 $ED $08 $F1 q7Fg32@43q79 >c16<@33$ED $07 $F4 q7Fg32.g32.$ED $08 $E7 g32@43q79>c32^4^1<](7)
+@33v255 $ED $08 $F1 q7Fg32@43q79 >d+16<@33$ED $07 $F4 q7Fg32.g32.$ED $08 $E7 g32@43q77>d+32^4^1<
+@33v255 $ED $08 $F1 q7Fg32@43q79 >f16<@33$ED $07 $F4 q7Fg32.g32.$ED $08 $E7 g32@43q7Bv248>f32^4^1<v255
+(7)4 [[@33$ED $08 $F1 q7Fg32@43q79>c4^16.<]]8$EF $49 $32 $32 t38r1
+
+#1[[r2]]12r1/r2$F4 $03 $DE $00 $0E $18 @38v106o5q7Fc1^4^16g1^2^8.a+1^2^4.r8^1<a+1^4^16>d+1^2^8.c+1^1^4r1^1^4
+<$ED $02 $E3 v100$F4 $01 q7Fc2[[^2]]13$F4 $01 ^2r1^2
+v116 $DE $18 $0E $18 
+[ [[@41o4d+8.$ED $0A $F3 d+8.]]4
+[[@41d8.$ED $0A $F3 d8.]]4 ]2 r1^1^1
+@44(10)[v181q7F$ED $0F $F8 y10o3c16q7E$ED $0C $FA d+16d16$ED $0F $F8 q7Fc16$ED $0C $FA q7Ed+16f16
+$ED $0F $F8 q7Fc16$ED $0C $FA q7Ec16a+16$ED $0F $F8 q7F>c16<$ED $0C $FA q7Ea+16g16
+$ED $0F $F8 q7F<a+16>$ED $0C $FA q7Ed+16d16$ED $0F $F8 q7F<a+16>$ED $0C $FA q7Ed+16f16
+$ED $0F $F8 q7F<a+16>q7E$ED $0C $FA c16a+16$ED $0F $F8 q7F>c16<$ED $0C $FA q7Ea+16g16
+$ED $0F $F8 q7F<f16>q7E$ED $0C $FA f16d+16$ED $0F $F8 q7F<f16>$ED $0C $FA q7Ef16g16
+$ED $0F $F8 q7F<f16>q7E$ED $0C $FA c16a+16$ED $0F $F8 q7F>c16$ED $0C $FA q7Ed+16f16
+$ED $0F $F8 q7Fc16q7E$ED $0C $FA g16f16$ED $0F $F8 q7Fc16$ED $0C $FA q7Eg16a+16
+$ED $0F $F8 q7F>c16<q7E$ED $0C $FA a+16g16$ED $0F $F8 q7Ff16$ED $0C $FA q7Ed+16<a+16]
+@32(10)@44$FA $02 $0F (10)$FA $02 $00 @41(10)r1
+
+#2[[r2]]12r1/r2$FA $02 $00 $F4 $03 $DE $00 $0E $18 ^8.@38v106 o5q7Fc1^4^16g1^2^8.a+1^2^4r1^16$DE $00 $0E $18 $ED $02 $E7 f1^1^1
+@38>c1^1^4r1^1^4
+<<$ED $02 $E3 v100$F4 $01 g2[[^2]]13$F4 $01 ^2 $DF
+@37v128[o4$ED $0E $F3 q7Fc32.$ED $0C $F3 g32.g+32.g32.
+[[$ED $0D $F3 c32.$ED $0B $F3 g32.g+32.g32.]]2
+$ED $0C $F3 q7Ec32.$ED $0A $F3 g32.f32.g32.]3
+[[$ED $0A $F3 q7Ec32.$ED $09 $F3 g32.g+32.g32.]]2
+$ED $09 $F3 c32.$ED $08 $F3 g32.g+32.g32.
+$ED $08 $F3 q7Dc32.$ED $07 $F3 g32.f32.g32.r1^2
+v116 $DE $18 $0E $18 
+[[@41o3q7Fg+8.$ED $0A $F3 g+8.]]4
+[[@41g8.$ED $0A $F3 g8.]]4
+[[r2]]11^4^16..$DE $12 $0E $18 v102y10@38$ED $07 $E7 $F4 $03 (11)[o3g32.>c32.d32.
+d+2^8^32d32.d+32.d2^16<a+8.>c1^2d+2^16f8.f+4.f4.d+1^4.^32<a+16.] $DF
+v181@41$FA $02 $FB (10)r1
+
+#3[[r2]]9$F4 $03 $FA $03 $10 @36
+v255y9$ED $0F $FC o6c16.$ED $0B $FC c16.
+v230y11$ED $0F $FC o6c16.$ED $0B $FC c16.
+y9v220$ED $0F $FC c16.$ED $0D $FC c16.
+
+y11v200$ED $0F $FC c16.$ED $0C $FC c16.
+v180$ED $0F $FC c16.$ED $0C $FC c16.
+v160$ED $0F $FC c16.$ED $0C $FC c16.
+y9v126$ED $0E $FC c16.$ED $0B $FC c16.
+$ED $0D $FC c16.$ED $0A $FC c16.r1/^1^4
+v160y10@37o4q7Fg4$ED $0B $F5 g4$ED $0A $F5 q7Eg4$ED $09 $F5 g4$ED $08 $F5 q7Ag4$ED $07 $F5 q78g4r2.
+@37q7Ff4$ED $0B $F5 f4$ED $0A $F5 q7Ef4$ED $09 $F5 f4$ED $08 $F5 q7Af4$ED $07 $F5 q78f4r1^1^4
+(2)[@37q7Fc4$ED $0B $F5 c4$ED $0A $F5 q7Ec4$ED $09 $F5 c4$ED $08 $F5 q7Ac4$ED $07 $F5 q78c4r2.]
+(2)^4[[r2]]10
+v100@38$ED $02 $E5 o4q7Fg+1^1^1^1^2r2^1
+v116 $DE $18 $0E $18 @41
+[[$ED $0F $F3 o4c8.$ED $0A $F3 c8.]]16
+v122 $DF
+[$ED $0F $FE c32.$ED $0E $FE c32.c32.c32.]24
+[[r2]]15
+*16r1
+
+#4
+@30o3v245$F4 $01 c2[[^2]]13/^2[[^2]]26$F4 $01 ^2
+r1^1^1^1^2
+@38$ED $02 $E6 v100$DE $00 $0E $18 $F4 $03 o5f+1^1^1 $DF
+@30o3v245$F4 $01 c2[[^2]]10$F4 $01 ^2
+$ED $0A $E0 v255$FA $03 $09 q7Ff16.$ED $0A $F0 g4^32$ED $0A $E0 c1^8$FA $03 $00
+y10
+@32(9)[v174o2$ED $0D $D9 q7Fc16$ED $0B $DB d+16d16
+$ED $0D $B9 c16$ED $0B $DB d+16d16
+$ED $0E $D9 c16$ED $0C $DB d+16d16
+$ED $0E $B9 c16$ED $0C $DB d+16d16v177
+[[$ED $0F $F9 c16$ED $0D $FB d+16d16
+$ED $0F $D9 c16$ED $0D $FB d+16d16]]2 ]
+[[$ED $0E $D9 c16$ED $0C $DB d+16d16
+$ED $0E $B9 c16$ED $0C $DB d+16d16]]2v181
+[[$ED $0E $F9 c16$ED $0C $FB d+16d16
+$ED $0E $D9 c16$ED $0C $FB d+16d16]]2v178
+[[$ED $0E $D9 c16$ED $0C $DB d+16d16
+$ED $0E $B9 c16$ED $0C $DB d+16d16]]2v177
+[[$ED $0E $D9 c16$ED $0C $DB f16g16
+$ED $0E $D9 c16$ED $0C $BB f16g16]]2v175
+[[$ED $0D $D9 c16$ED $0B $DB g+16g16
+$ED $0D $B9 c16$ED $0B $BB g+16g16]]4
+@40 $FA $02 $0C
+(9)2 $FA $02 $00 v178
+[[$ED $0F $F9 d+16$ED $0D $FB f+16f16
+$ED $0F $D9 d+16$ED $0D $FB f+16f16]]2v181
+[[$ED $0E $D9 d+16$ED $0C $DB g+16a+16
+$ED $0E $D9 d+16$ED $0C $BB g+16a+16]]2v177
+[[$ED $0D $D9 d+16$ED $0B $DB b16a+16
+$ED $0D $B9 d+16$ED $0B $BB b16a+16]]4
+v102@38$ED $07 $E7 $DE $12 $0E $18 
+o4c1^1^1$F4 $01 @30v245o3c1
+
+#5[[r2]]12^1/^8$F4 $03 @39$ED $0F $FC v255o5y9f32.$ED $0B $FC e32.y11v243(3)[@39f32.$ED $0B $FC e32.]y9(3)v233y11(3)
+y9@39f32.$ED $0A $FC e32.v218y11@39f32.$ED $0A $FC e32.$ED $0D $FC y10v205f32.$ED $09 $FC e32.
+$ED $0C $FC q7Df32.$ED $0B $FC e32.f32.e32.q7Cf32.e32.
+$ED $0A $FC q7Bf32.e32.f32.$ED $09 $FC e32.r4[[r2]]25
+$F4 $03 @35v110y10[[$ED $0D $EF o1q7Fd16.$ED $0A $EF d16.]]40
+[[r2]]8^4^16
+@42v172$ED $0F $F3 y10$FA $02 $03 o6a32.a32.a32.a32.a1^4^16a32.a32.a32.a32.a2$FA $02 $00 [[^2]]34
+
+
+#6
+r1^2^4. $F4 $03 $FA $02 $40 @34v170y11o2d=2r=1d64c=2r64c=4r8.v230y9c=2c=2c64d=4r32.d64c=2r64c=4r16c=2r=4c=2r=14^4y10v234c64d=2r32d64c=1r64c=4r=2c=2r=4c=2c64c=2c=2$ED $02 $FF r32c=4c=2r=5c=2c64r=5c=2r=13c=2c=1r=1c=2<a+=2b=1r64a+=2r=1>c+64r=1c=2r=4c+=2<a+=4r32.b=2$ED $04 $FF y9v230 r=4$FA $02 $06 f+=2f+=1f+64g+=4r32.g+64f+=2r64f+=4r16f+=2r64f+=2r=10y10v228f+64g+=2r32g+63f+=1r64f+=4r=2f+=2r=4f+=2f+64f+=1f+=2r=7f+=4f+=2r=4f+=2f+64r32f+=2r=13f+=1f+=2r=1f+=2e=1f=2r64e=2r=1g64r=1f+=2r=4g=2r=2e=4r32.f=2r=4
+r8^2^1^1/[[r1]]15 $FA $02 $00
+(4)[^8@39v255y9o5f32.$ED $0A $FC e32.y11v243$ED $0D $FC f32.$ED $0A $FC e32.
+y9$ED $0D $FC f32.$ED $0A $FC e32.v233y11$ED $0D $FC f32.$ED $0A $FC e32.
+y9$ED $0D $FC f32.$ED $09 $FC e32.v218y11$ED $0D $FC f32.$ED $09 $FC e32.
+y10v211 $ED $0C $FC f32.$ED $08 $FC e32.$ED $0B $FC q7Ef32.$ED $0A $FC e32.
+$ED $0B $FC f32.$ED $0A $FC e32.$ED $0B $FC q7Df32.$ED $0A $FC e32.
+$ED $0A $FC f32.$ED $09 $FC e32.$ED $0A $FC f32.$ED $09 $FC e32.
+r4.]
+(5)[$ED $0B $FC y9v218q7F<f32. $ED $09 $FC e32. $ED $0B $FC y11f32.$ED $09 $FC e32.
+v225y9$ED $0A $FC f32. $ED $08 $FC e32. q7Ey11$ED $0A $FC f32.e32.
+$ED $0B $FC v222q7Dy9f32. $ED $0A $FC e32. $ED $0B $FC y10q7Af32.$ED $0A $FC e32.
+$ED $0A $FC f32. $ED $09 $FC e32. $ED $0A $FC q76f32.$ED $09 $FC e32.r8^2]
+(4)(5)(4)^4.[[r2]]24 $DE $12 $0E $18 
+^32.v100@38$ED $07 $E7 (11)q7Fc16^4^2^1^1r1
+
+#7[[r2]]12/(12)[o2v255$FA $03 $A6 @33 $ED $07 $F1 q7Fg2^16$ED $06 $F1 q7Eg4..]/^2
+[[$ED $07 $F1 q7Fg2^16$ED $06 $F1 q7Eg2^4..]]9$FA $03 $A8 [[v255 $ED $06 $F1 q7Fg16.$ED $07 $F1 v240g4^8..$ED $06 $F1 v250g2^4^8.]]5
+[[@31y10v250 $ED $0E $FD o2c16.$ED $0E $FD v254c16.v242c16.$ED $0D $FD v250c16.
+@33>>v190q7F$ED $0F $FD f16.$ED $0D $FD q7Ef16.$ED $0C $FD q7Df16.$ED $0B $FD f16.]]10
+$FA $03 $A9
+@33$ED $0B $FD [[v255q7Fo2g32.r64^2^4..^1^2^4^16$ED $07 $F1 (8) ]]3
+g32.r64^2^4..[[^1]]5(12)
+
+#SPC
+{
+	#title "Northern Hemispheres"
+	#game "DKC/SMW"
+	#length "5:48"
+}
