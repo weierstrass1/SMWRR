@@ -1,0 +1,113 @@
+#path "Zero's Rebirth"
+
+#samples
+{ #default #AMM
+"Distortion Guitar.brr"
+"Overdriven Guitar.brr"
+"Snare.brr"
+"Kick.brr"
+"Slap Bass.brr"
+"Crash Cymbal.brr"
+}
+
+#instruments
+{
+"Distortion Guitar.brr" $ff $e0 $00 $03 $c8	;c90
+"Overdriven Guitar.brr" $ff $e0 $00 $02 $7c	;14d0
+"Snare.brr" $ff $e0 $00 $02 $e0			;1810
+"Kick.brr" $ff $e0 $00 $02 $27			;1200
+"Kick.brr" $ff $e0 $00 $02 $e0			;1810
+"Slap Bass.brr" $ff $ef $00 $04 $78		;12b0
+"Crash Cymbal.brr" $ff $e0 $00 $02 $00		;????
+}
+
+"DstGi=@30 $ee $03"
+"OvrGi=@31 $ee $05"
+"Bas=@35"
+
+"S=@32"
+"K=@33"
+"K2=@34"
+"Cr=@36"
+
+#0 w240 t69
+
+$ef $13 $b0 $50
+$f1 $02 $3c $00
+$f5 $34 $33 $00 $d9 $e5 $01 $fc $eb
+$f4 $02
+
+DstGi $fa $05 $b6 y15 v217
+o4g+8r8a+8r8 $ec$06$15$02 >p13,13,40 c2 p0,0 $ec$00$00$00
+c8r8<a+8r8 $ec$00$05$02 p13,13,40 $e8$ff$a8 $fa $05 $af g+1. $ec$00$00$00
+t73 r2 p0,0 /$fa $05 $b8
+o6[v115 c12r24 v135 c12r24]8
+<(10)[v115 g+12r24 v135 g+12r24]8
+(11)[v115 a+12r24 v135 a+12r24]8 
+(10)4 (11)3
+v115 b12r24 v135 b12r24
+
+
+#1 OvrGi v133 y8
+$fa $05 $b2
+o6c16r48<a+16r48g+16r48a+16r48g+16r48a+16r48 $ec$06$15$02 >p13,13,40 $fa $05 $b0 c3^32 r8^96 p0,0 $ec$00$00$00
+$fa $05 $b2 
+d+16r48d16r48c16r48d16r48c16r48<a+16r48 $ec$06$15$02 p13,13,40 $fa $05 $af >c1^2 $ec$00$00$00
+r2/^4 p0,0 
+$fa $05 $b3 v143 p16,13,40
+<d+12r6^8
+f12r6^8g12r6^8g12r6
+$fa $05 $af g12r24f12r24d12r24 $fa $05 $b3 g+12r6^8a+12r6^8
+>c12r6^8d+12r6d+12r6
+$fa $05 $af d+12r24d12r24c12r24 $fa $05 $b4 <a+12r6^8>c12r6^8
+d12r6^8f12r6f12r6
+$fa $05 $b2 f12r24d+12r24<a+12r24 p13,13,40 $ec$06$15$02>c3^32r96d3^32
+r96 $ec$00$00$00 c6r12<$ec$06$15$02 a+3^32 r96f3^32
+r96 $ec$00$00$00 g6r8
+
+#2 v250 y10
+r1. $fa $05 $b8
+o6 S c12r6c12r6c12r6c12r24
+K c12r24 S c12r24 K c12r24 S c12r24 K c12r24
+S c12r24 K c12r24c12r24 S c12r24/v240
+S c12r24 Kc12r24 S c12r24 K c12r24
+[S c12r24 K c12r24 S c12r24 K c12r24 K2 c12r24 K c12r24 S c12r24 K c12r24]7
+S c12r24 K c12r24 S c24r48c24r48c12r32.
+
+
+#3 v245 y10
+r1. $fa $05 $b8
+o6 K c12r6c12r6
+c12r24c12r2.^24
+c12r6^16 S c12r12./o5
+$fa $05 $bc 
+Bas v255 $fa $03 $15
+[c12r24]16
+<
+(30)[g+12r24]16
+(31)[a+12r24]16
+(30)8 (31)6
+g12r24a+12r32.
+
+
+#4 OvrGi v137 y10
+$fa $05 $b2
+o6d+16r48d16r48c16r48d16r48c16r48d16r48 $fa $05 $b0 $ec$06$15$02 p13,13,40 d+3^32r8^96 p0,0 $ec$00$00$00
+g16r48f16r48d+16r48f16r48d+16r48d16r48 $fa $05 $af $ec$06$15$02 p13,13,40 d+1^2
+r2/$ec$00$00$00
+Cr $f4$03 y9 v255 $fa $03 $22 $fa $05 $b5 o6c24r6^24
+
+OvrGi $f4$03 $fa $05 $b3 y9 v138 $fa$03$00 p16,13,40 
+
+c12r6^8d12r6^8d+12r6^8d+12r6
+$fa $05 $af d+12r24d12r24<a+12r24> $fa $05 $b3 c12r6^8d12r6^8
+d+12r6^8g12r6 $fa $05 $b4 g12r6
+g12r24 $fa $05 $af f12r24d+12r24 $fa $05 $b4 d12r6^8d+12r6^8
+f12r6^8g+12r6g+12r6
+
+$fa $05 $b2 g+12r24g12r24d12r24 p13,13,40 $fa $05 $af $ec$06$15$02 d+3^32r96f3^32
+$ec$00$00$00 $fa $05 $b2 r96d+6r12 $fa $05 $b3 $ec$06$15$02 d3^32r96<a+3^32
+r96b4
+                
+
+#amk=1

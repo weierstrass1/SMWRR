@@ -61,7 +61,7 @@
 "RS1 String Ensemble.brr" $f7 $e0 $8b $04 $f2
 "RS1 String Ensemble (Octave).brr" $f7 $e0 $b8 $05 $46
 "Plok Sine Wave.brr" $ff $e0 $b8 $04 $00
-"Pulse.brr" $ff $e0 $b8 $05 $01	
+"Pulse.brr" $ff $e0 $b8 $05 $08	
 "Finger Bass (High).brr" $8f $91 $b8 $02 $15
 "BMfM Crash Cymbal.brr" $ff $f3 $b8 $04 $00
 "BMfM Kick.brr" $ff $f6 $b8 $06 $00
@@ -97,7 +97,7 @@
 #0 w190 t69
 
 $ef $ef $1a $1a		
-$f1 $02 $60 $00
+$f1 $04 $60 $00
 
 $f5 $0c $21 $2b $2b $13 $fe $f3 $f9
 $f4 $02
