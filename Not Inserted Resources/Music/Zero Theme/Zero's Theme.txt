@@ -1,0 +1,143 @@
+#amk 2
+
+#path "zerox3"
+
+#samples
+{
+	#default
+	"snare.brr"
+	"kick.brr"
+	"overdrive.brr"
+	"dist.brr"
+	"slap.brr"
+	"crashcymbal.brr"
+	"tom.brr"
+}
+
+#instruments
+{
+	"snare.brr" $FF $E0 $00 $06 $78
+	"kick.brr" $FF $E0 $00 $04 $D8
+	"crashcymbal.brr" $FF $F0 $00 $03 $E8
+	"tom.brr" $FF $E0 $00 $03 $35
+	"overdrive.brr" $FF $E0 $00 $0A $10
+	"dist.brr" $FF $E0 $00 $07 $92
+	"slap.brr" $FF $EF $00 $08 $F8
+}
+
+w245 t49
+
+$EF $D7 $B0 $50
+$F1 $02 $3C $01
+$F5 $34 $33 $00 $D9 $E5 $01 $FC $EB
+$F4 $02
+
+"overd=@34"
+"dist=@35"
+
+
+#0 r8. overd v130 y8
+
+q7f $ED $7F $E0 f+16f+16 q79 f+16 q7f $ED $0F $38 e8. $ED $7F $E0 d=120
+d16d16 q79 d16 q7f $ED $0F $38 c+8. $ED $7F $E0 <b4.b8>c+16d16
+[c+16c+16 q79 c+4 q7f]2 c+8d16e16
+f+8 q78 f+8 q7f f+2.
+b4 q7b b4 q77 b4 q73 b4 q7d
+dist $ED $3F $EE r8f+8.f+8.f+8.b8a8. / q7f
+(1)[overd $ED $7F $E0
+o4 b4 q79 b4 q7f d16e8f+8.<b8
+>f+4a8f+2e16 $ED $1F $EF f+8. $ED $7F $E0
+c+4.c+16d8 $ED $1F $EF e8. $ED $7F $E0 c+8
+f+=108e16d8c+16 q78 c+16 q7f e16 q78 e16 q7f
+b4 q79 b4 q7f d16e8f+8.<b8
+>f+4a8f+2e16d16
+c+2c+16<b8a16 q78 a8 q7f >c+8
+<b=108>f+16f+16 q78 f+16 q7f f+16 q78 f+16 q7f a+8]
+
+#1 r8. dist v140
+o3 $ED $7F $E0 b2..a8
+g2..a8 $ED $3F $EE
+e4.e4.e4 $ED $7F $E0
+f+8 q7d f+8 q7f f+2.
+b4 q7d b4 q7b b4 v110 b4 v140 q7d $ED $1F $1F 
+r8>d8.d8.d8.f+8e8. /
+[a8.a8.a8.a8.a16a8.
+b8.b8.b8.b8.b16b8.
+a8.a8.a8.a8.a16a8.
+b8.b8.b4a+8.a+16a+8]2
+
+#2 r8. overd v130 y15
+
+$ED $7F $E0 o4 d16d16 q79 d16 q7f $ED $0F $38 c+8. $ED $7F $E0 <b=120
+b16b16 q79 b16 q7f $ED $0F $38 a8. $ED $7F $E0 g4.g8a16b16
+[g16g16 q79 g4 q7f]2 g8b16>c+16
+c+8 q78 c+8 q7f c+2.
+d4 q7b d4 q77 d4 q73 d4 q7f
+dist $ED $3F $EE r8o3b8.b8.b8.>d8c+8. q7c overd $ED $1F $EF /
+<[f+8.f+8.f+8.f+8.f+16f+8.
+f+8.f+8.f+8.f+8.f+16f+8.
+e8.e8.e8.e8.e16e8.
+f+8.f+8.f+4e8.e16e8]2
+
+#3 r8. v235 @36
+o3b=120b4a8
+g=120g4g8
+e16e=60e16e=60e4
+f+4f+2.
+[b8.b8.b4b8>f+16<b8.]2 /
+[b8.b8.b4b8>f+16<b8.
+g8.g8.g4g8>d16<b8.
+a8.a8.a4a8>d16<a8.
+b8.b8.b4a+8a+16>c+8.]2
+
+#4 r8. overd v115 y5 o3
+
+q7f $ED $7F $E0 b16b16 q79 b16 q7f $ED $0F $38 a8. $ED $7F $E0 f+=120
+f+16f+16 q79 f+16 q7f $ED $0F $38 e8. $ED $7F $E0 d4.d8e16f+16
+[e16e16 q78 e4 q7f]2 e8g16g16
+a+8 q78 a+8 q7f a+2.
+>f+4 q7b f+4 q77 f+4 q73 f+4 q7f
+r8o2b8.b8.b8.>d8c+8. / q7e $ED $1F $EF
+[d8.d8.d8.d8.d16d8.
+d8.d8.d8.d8.d16d8.
+c+8.c+8.c+8.c+8.c+16c+8.
+d8.d8.d4c+8.c+16c+8]2
+
+#6 r8. overd v85 y12 o4
+
+r2 q7f $ED $7F $E0 f+16f+16 q79 f+16 q7f $ED $0F $38 e8. $ED $7F $E0 d8
+r2 d16d16 q79 d16 q7f c+=60 v100
+dist >[q7f c+16c+16 q78 c+4]2 q7f c+8d16e16
+f+8 q78 f+8 q7f f+2. v150
+o3[b16b16b8r8b16b16b8r8b16b16b8]2 / overd v115 $ED $7F $E0
+o4d4 q79 d4 q7f <b16>c+8d8.<f+8
+>d4f+8d2c+16 $ED $1F $1F d8. $ED $7F $E0
+<a4.a16b8>$ED $1F $1F c+8. $ED $7F $E0 <a8
+>d=108c+16<b8a+16 q78 a+16 q7f >c+16 q78 c+16 q7f
+d4 q79 d4 q7f <b16>c+8d8.<f+8
+;By MaxodeX
+>d4f+8d2c+16<b16
+a2a16e8e16 q78 e8 q7f a8
+f+=108>c+16c+16 q78 c+16 q7f c+16 q78 c+16 q7f f+8
+
+#7 r8. overd v80 o4
+
+r2 $ED $7F $E0 o4 d16d16 q79 d16 q7f $ED $0F $38 c+8. $ED $7F $E0 <b8
+r2b16b16 q79 b16 q7f a=60
+r1^1^1^1 / ^8 v70
+(1)
+
+#5 o4 @12 v0 c8. v230
+@32 d-=120 @33 a4e8
+@32 d-=108 @33 b8.a16e8e16
+@32 d-4.d-=120
+d-4d-4 o4 @31 c16c16 @30 f+8f+8f+16f+16
+@32 d-4 @30 f+8 @31 c16c8.c8 @30 f+16
+@31 c8.
+@31 c8.c16 @30 f+8 @31 c16c8 @30 f+16 @31 c16
+@30 f+16f+16 @31 c8 @30 f+16 /
+[@32 d-4
+@30 f+8 @31 c16c8.c8 @30 f+16 @31 c8.
+@31 c8.c16 @30 f+8 @31 c16c8.c8 @30 f+16 @31 c8.
+@31 c8.c16 @30 f+8 @31 c16c8.c8 @30 f+16 @31 c8.
+@31 c8.c16 @30 f+8 @31 c16c8c16 @30 f+8f+16f+8f+16]2

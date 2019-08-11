@@ -1,0 +1,169 @@
+#path "Big Boss Blues"
+#amk 1
+#samples
+{	#default
+"14.brr"
+"15.brr"
+"16.brr"
+"17.brr"
+"18.brr"
+"19.brr"
+"1a.brr"
+"1b.brr"
+"1c.brr"
+"1d.brr"
+}
+
+;Donkey Kong Country 3 - Big Boss Blues
+;Ported by Blind Devil (Started at September 21st, 13:01; ended at September 22nd, 2011, 13:06)
+;Had delayed work: Yes. -2 hours trying to fix the modem again (in vain).
+;Song Duration: 00:45
+;Insert Size: 1845 bytes
+;N-SPC Patch Required! (Addmusic 4)
+;Sample Bank Required: Yes (DKC3BBB.bnk) (Don't mount in on a Yoshi, or something odd may happen.)
+;Header type: Level
+
+;Sample List (maybe they're not what I think):
+
+;$14 = Some kind of string sample
+;$15 = Synth Square
+;$16 = Guitar Shred 
+;$17 = The well-known guitar sample I use for solos in my songs
+;$18 = Shaker
+;$19 = Soprano Sax
+;$1A = Hard Drum Beat
+;$1B = Dist. Guitar
+;$1C = Bass Guitar
+;$1D = Contrabass
+
+;Deleted Samples List:
+
+;$12 (@15) = Orchestra Hit
+
+;"No sacrifice, no victory." - Hammerfall
+
+;Header:
+;esto es conocido como sU Pu tA mAdRE
+
+#0
+w0c8/
+
+;Echo:
+$EF $D7 $20 $20
+$F1 $00 $37 $01	;I don't understand, echo with zero delay value... But the original has something like that. Pretty weird, anyways. At least for me.
+$F2 $37 $20 $20
+;FIR Filter:
+$f5$7f$01$00$00$00$00$00$00
+
+t58 w255 ;$f3 $30 $06 
+$f3 $14 $06 h1 $EE $9B $ed$3d$60
+q7F y10 o4 l16
+[v170 g v155 <a+ v185 a+ v155 >g v185 c v155 <a+ v185 >d v155 ccd v185 <a+ v155 >d v185 c v155 <a+ v185 >d v155 c
+cd v185 <a+ v155 >d v185 c v155 <a+ v185 >d v155 ccd v185 <a+ v155 >d v185 c v155 <a+ v185 >d v155 c
+v185 g v155 <a+ v185 a+ v155 >g v185 c v155 <a+ v185 >d v155 ccd v185 <a+ v155 >d v185 c v155 <a+ v185 >d v155 c
+cd v195 <a+ v165 >d v185 c v165 <a+ v185 >d v165 cv185 d+ v155 d v185 d v155 d+ v185 c v155 d v185 <a+ v155 >c]2
+[$f3 $1A $03 h0 $EE $3E $ED $2A $80 l8 o2
+v255 a $ED $26 $80 v225 a v195 a v165 ar=96
+r=192]3 $EF $D7 $20 $20
+$ED $2A $80 v255 a $ED $26 $80 v225 a v195 a v165 ar=48 $ED $2A $80 v255 aa
+^=192
+$f3 $1D $03 h2 $EE $AC $ED $1F $BC o3 l8
+[v230 g+ v180 g+ v205 g+ v165 g+ v135 g+ v100 g+ v125 g+ v100 g+]4
+[v230 b v180 b v205 b v165 b v135 b v100 b v125 b v100 b]4
+$f3 $19 $0A h1 $EE $00 $ED $2A $54 $ED $7E $F5 o3 l16 r=32 $EF $DC $20 $20
+v105 e=24eee=24eee=24eegf+<g+>d<
+v130 e=24eee=24eee=24eegf+<g+>d
+r=160
+
+#1
+r8
+/q7F $f3 $14 $03 h1 $EE $9B $ED $6E $A4 v255 y10 o2 l1 p36,50
+g^
+d+^ $ED $63 $63
+<g^^^>
+[r=48 $f3 $1B $05 h0 $EE $D0 $ED $3E $63 $DF l8
+v200 g=36r=12 v175 g=40r=8 v150 g=40r=8 v120 g=40r=8g=40r=8 v90 g v200 gg=40r=8
+d+=192^=192]2
+$f3 $1C $02 h4 $EE $C3 $ED $7F $FA o4 l16
+v200 g+ v140 <b v200 b v140 >g+ v200 c+ v140 <b v200 >d+ v140 c+c+d+ v200 <b v140 >d+ v200 c+ v140 <b v200 >d+ v140 c+
+c+d+ v200 <b v140 >d+ v200 c+ v140 <b v200 >d+ v140 c+c+d+ v200 <b v140 >d+ v200 c+ v140 <b v200 >d+ v140 c+
+v200 g+ v140 <b v200 b v140 >g+ v200 c+ v140 <b v200 >d+ v140 c+c+d+ v200 <b v140 >d+ v200 c+ v140 <b v200 >d+ v140 c+
+c+d+ v200 <b v140 >d+ v200 c+ v140 <b v200 >d+ v140 c+ v200 e v140 d+ v200 d+ v140 e v200 c+ v140 d+ v200 <b v140 >c+
+v200 b v140 d v200 d v140 b v200 e v140 d v200 f v140 eef v200 d v140 f v200 e v140 d v200 f v140 e
+ef v200 d v140 f v200 e v140 d v200 f v140 eef v200 d v140 f v200 e v140 d v200 f v140 e
+v200 b v140 d v200 d v140 b v200 e v140 d v200 f v140 eef v200 d v140 f v200 e v140 d v200 f v140 e
+ef v200 d v140 f v200 e v140 d v200 f v140 e v200 g v140 f v200 f v140 g v200 e v140 f v200 d v140 e
+$f3 $19 $0A h1 $EE $00 $ED $2A $54 $ED $7E $F5 o3
+v140 e=24eee=24eee=24eegf+<g+>d<
+v175 e=24eee=24eee=24eegf+<g+>d
+r=192
+
+#2
+r8
+/q7F $f3 $14 $06 h1 $EE $9B $ED $41 $40 v190 y10 o3 p26,26 l1
+(20)[r1]2
+d^ $f3 $19 $0A $EE $00 $ED $2A $54 l8 $EF $D3 $20 $20
+v175 g (21)[v175 g v125 g]3 v175 gr (21)3 v175 g
+f (21)6 v175 g l16 ga+>cd $EF $D7 $20 $20
+$f3 $14 $03 $EE $9B $ED $4E $F0 l8 o3
+v190 g (22)[v190 g v145 g]3 v190 gr (22)3 v190 g
+f (22)6 v190 g l16 ga+>cd< l8
+v190 g (22)3 v190 gr (22)3 v190 g
+f (22)6 v190 g l16 ga+>cd
+(20)8
+$f3 $14 $06 $ED $4D $90 o2 l8
+v175 e (23)[v175 e v125 e]3 v175 er (23)3 v175 e l16
+v200 egab> v125 egab> v100 egab> v75 egab>
+
+#3
+r8
+/q7F y10 o2 $f3 $15 $08 h0 $EE $00 $ED $7E $FD l16
+(30)[v190 g v175 g v190 g v100 g v190 g v100 g v190 g v100 g v190 g v100 g v190 g v100 g v190 g v100 g v190 g v100 g]3
+(31)[v190 g v175 g v190 g v100 g v190 g v100 g v190 g v100 g v190 g v100 g v190 g v100 g v190 g v175 g v190 g v175 g]
+(30)3
+(31)
+(30)3
+(31)
+(30)3
+(31)
+$f3 $1C $02 h4 $EE $C3 $ED $6F $DD o3
+[v190 g+ v175 g+ v190 g+ v100 g+ v190 g+ v100 g+ v190 g+ v100 g+ v190 g+ v100 g+ v190 g+ v100 g+ v190 g+ v100 g+ v190 g+ v100 g+]3
+v190 g+ v175 g+ v190 g+ v100 g+ v190 g+ v100 g+ v190 g+ v100 g+ v190 g+ v100 g+ v190 g+ v100 g+ v190 g+ v175 g+ v190 g+ v175 g+
+[v190 b v175 b v190 b v100 b v190 b v100 b v190 b v100 b v190 b v100 b v190 b v100 b v190 b v100 b v190 b v100 b]3
+v190 b v175 b v190 b v100 b v190 b v100 b v190 b v100 b v190 b v100 b v190 b v100 b v190 b v175 b v190 b v175 b
+(20)2 $f3 $14 $06 h1 $EE $9B $ED $4D $90 o2 l16 r=32
+v125 egab> v60 egab> v50 egab> r=16
+
+#4
+r8
+/$EE $00 q7F v160 y8 o3 l1
+(20)3 $f3 $17 $05 $ED $4F $84 $EE $25
+r2r=48c+=48 $DD $60 $60 $9B $DE $60 $09 $1F
+^^
+^^
+(20)19
+
+#5
+r8
+/q7F o4 l16 $f3 $18 $07 $EE $E9 $ED $7C $E0
+(20)3
+r2
+v90 y8 gg v125 y12 gg y8 gg v155 gg
+[v175 g v130 ggg v175 g v130 ggg v175 g v130 ggg v175 g v130 gg v155 g]12
+(20)11
+
+#6
+r8
+/r=80
+[q7F v160 y12 o2 $f3 $16 $03 $ED $78 $E0 l1 a+=160
+v95 a+=32
+^^^]2
+(20)19
+
+#7
+r8
+/
+[q7F v230 y8 o2 $f3 $16 $03 $ED $78 $E0 l1 a+=160
+v145 a+=32
+^^^]2
+(20)19
